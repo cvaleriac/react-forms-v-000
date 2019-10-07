@@ -1,10 +1,10 @@
 import React from 'react';
- 
+
 class ControlledInput extends React.Component {
     state = {
         value: '',
     }
- 
+
     handleChange = event => {
         this.setState({
         value: event.target.value,
@@ -15,7 +15,7 @@ class ControlledInput extends React.Component {
         event.preventDefault()
         this.sendFormDataSomewhere(this.state)
     }
- 
+
     render() {
         return (
             <form onSubmit={event => this.handleSubmit(event)}>
@@ -28,5 +28,5 @@ class ControlledInput extends React.Component {
         );
     }
 }
- 
+
 export default ControlledInput;
